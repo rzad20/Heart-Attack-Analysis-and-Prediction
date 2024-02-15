@@ -1,4 +1,4 @@
-# Analisa Kinerja Algoritma *K-Nearest Neighbor*, *Logistic Regression*, dan *Random Forest* Dalam Memprediksi Pasien Beresiko Serangan Jantung  
+# Analisa Kinerja Algoritma *K-Nearest Neighbor*, *Logistic Regression*, dan *Random Forest* Dalam Memprediksi Pasien Berisiko Serangan Jantung  
 Proyek ini dibuat sebagai bahan tugas pengerjaan proyek dalam kursus Machine Learning Terapan Dicoding
 ## Domain Proyek
 ### Latar Belakang
