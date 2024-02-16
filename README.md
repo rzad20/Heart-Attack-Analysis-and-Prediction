@@ -1,4 +1,4 @@
-# Analisa Kinerja Algoritma *Random Forest Classification*, dan *Ada Boost Classifier* Dalam Memprediksi Pasien Berisiko Serangan Jantung  
+# Laporan Proyek Machine Learning - Rizky Aditya
 Proyek ini dibuat sebagai bahan tugas pengerjaan proyek dalam kursus Machine Learning Terapan Dicoding
 ## Domain Proyek
 ### Latar Belakang
@@ -24,6 +24,16 @@ ini nantinya akan mengintegrasikan berbagai data klinis dan faktor risiko yang r
 menjadi alat yang berguna bagi pihak medis dalam meningkatkan deteksi dini dalam pencegahan serangan jantung, serta meningkatkan kesadaran masyarakat tentang pentingnya menjaga
 kesehatan jantung.
 
+Algoritma prediksi dapat membantu pihak medis dalam meningkatkan deteksi dini serangan jantung dengan cara sebagai berikut:
+
+1. **Identifikasi Risiko Individu**: Algoritma prediksi dapat mengintegrasikan data klinis dan faktor risiko yang relevan dari setiap individu, seperti usia, tingkat kolesterol, tekanan darah, riwayat keluarga, dan lain-lain. Dengan analisis ini, algoritma dapat mengidentifikasi individu yang berisiko tinggi terkena serangan jantung.
+
+2. **Pemantauan Berkelanjutan**: Algoritma dapat digunakan untuk memantau kondisi kesehatan pasien secara terus-menerus. Dengan memantau faktor risiko dan perubahan kondisi kesehatan, pihak medis dapat mengidentifikasi perkembangan risiko serangan jantung pada setiap individu.
+
+3. **Pengambilan Keputusan Klinis**: Berdasarkan hasil prediksi yang diberikan oleh algoritma, pihak medis dapat mengambil langkah-langkah preventif atau intervensi yang sesuai untuk mengurangi risiko serangan jantung pada pasien. Ini bisa mencakup perubahan gaya hidup, penggunaan obat-obatan, atau intervensi medis yang lebih lanjut.
+
+4. **Edukasi Pasien**: Informasi yang dihasilkan oleh algoritma prediksi dapat digunakan untuk memberikan edukasi kepada pasien tentang faktor risiko yang mempengaruhi serangan jantung. Dengan pemahaman yang lebih baik tentang kondisi kesehatan mereka, pasien dapat mengambil langkah-langkah preventif yang tepat untuk mengurangi risiko serangan jantung.
+
 ## Business Understanding
 
 Proyek ini diharapkan dapat memberi dampak signifikan baik bagi dunia bisnis dan dunia kesehatan. Dalam sudut pandang bisnis, diharapkan proyek ini dapat memberikan
@@ -31,14 +41,24 @@ solusi teknologi yang inovatif bagi lembaga kesehatan. Dalam sudut pandang dunia
 dapat membantu pihak medis dalam menentukan risiko penyakit jantung lebih cepat, sehingga dapat berpotensi mengurangi angka kematian, meningkatkan kualitas hidup pasien dan
 memungkinkan intervensi medis yang lebih tepat waktu terhadap pasien berisiko terkena serangan jantung.
 
+Solusi teknologi ini dapat diterapkan dalam lembaga kesehatan dengan cara sebagai berikut:
+
+1. **Penerapan Algoritma Prediksi**: Algoritma prediksi diintegrasikan ke dalam sistem informasi rumah sakit atau aplikasi kesehatan. Data klinis pasien dimasukkan ke dalam algoritma untuk memprediksi risiko serangan jantung.
+
+2. **Monitoring Pasien**: Sistem memantau kondisi kesehatan pasien secara real-time, termasuk tingkat kolesterol, tekanan darah, dan detak jantung.
+
+3. **Peningkatan Efisiensi**: Dengan adanya algoritma prediksi dan monitoring pasien secara otomatis, efisiensi dalam deteksi dini serangan jantung meningkat.
+
+Melalui penerapan solusi teknologi ini, lembaga kesehatan dapat meningkatkan efisiensi dalam deteksi dini serangan jantung. Tim medis dapat mengidentifikasi pasien dengan risiko tinggi secara lebih cepat dan akurat, sehingga memungkinkan intervensi medis yang tepat waktu. Hal ini tidak hanya mengurangi angka kematian akibat serangan jantung, tetapi juga meningkatkan kualitas
+
+
 ### Problem Statement
 1. Bagaimana mengembangkan algoritma prediksi yang efektif untuk klasifikasi risiko serangan jantung pada pasien berdasarkan data klinis mereka?
 2. Bagaimana implementasi algoritma prediksi dalam meningkatkan deteksi dini serangan jantung berdasarkan teknologi yang akan dibangun?
 
 ### Goals
 1. Mengembangkan algoritma dengan tingkat akurasi prediksi yang cukup akurat untuk mengklasifikasi risiko serangan jantung pada pasien.
-2. Membantu Dunia Kesehatan dan Medis meningkatkan efisiensi dalam mendeteksi risiko serangat jantung pada pasien.
-3. Membantu bidang medis agar dapat mengintervensi dini kemungkinan serangan jantung untuk mengurangi tingkat kematian akibat serangan jantung
+2. Mengimplementasikan algoritma prediksi dalam meningkatkan deteksi dini serangan jantung berdasarkan teknologi yang akan dibangun.
 
 ### Solution
 1. Mengumpulkan data klinis pasien yang relevan dan memproses data tersebut agar bisa diolah oleh algoritma prediksi.
@@ -48,6 +68,11 @@ memungkinkan intervensi medis yang lebih tepat waktu terhadap pasien berisiko te
 ## Data Understanding
 Dalam membangun model prediksi, proyek ini akan menggunakan data *Heart Attack Risk Prediction Dataset* yang dibuat oleh Sourav Banerjee.  
 dataset ini didapatkan dari platform *Kaggle* dan dapat diakses di [link berikut ini](https://www.kaggle.com/datasets/iamsouravbanerjee/heart-attack-prediction-dataset)
+
+Dataset dipilih berdasarkan penilaian atas jumlah fitur yang mencukupi untuk mewakili kategori-kategori yang berpotensi menjadi penyebab serangan jantung. Seleksi dataset dilakukan setelah melakukan evaluasi terhadap beberapa dataset yang tersedia di Kaggle.
+
+Penyelidikan dataset dilakukan dengan mempertimbangkan ketersediaan fitur yang mencakup berbagai aspek yang relevan dengan risiko serangan jantung. Dataset dipilih berdasarkan kriteria ini untuk memastikan bahwa dataset yang digunakan dapat memberikan informasi yang komprehensif dan cukup untuk mengembangkan algoritma prediksi risiko serangan jantung yang efektif.
+
 ### Daftar Variabel dalam Dataset
 1. **Patient ID** - Identifikasi unik untuk setiap pasien.
 2. **Age** - Usia Pasien (Numerikal).
@@ -81,7 +106,7 @@ Langkah selanjutnya adalah mengidentifikasi adanya **Outlier** atau **Pencilan**
 **Outliers** adalah sampel yang nilainya sangat jauh dari cakupan umum data utama, ia adalah hasil pengamatan yang
 kemunculannya sangat jarang dan berbeda dari hasil pengamatan lainnya.
 
-Dalam proyek ini, kita akan menggunakan Metode **IQR Method** dalam mengatasi outlier.
+Dalam proyek ini, akan menggunakan Metode **IQR Method** dalam mengatasi outlier.
 Metode *Inter Quartile Range* atau IQR berhubungan dengan konsep kuartil. Kuartil dari suatu populasi adalah
 tiga nilai yang membagi distribusi data menjadi empat sebaran. Seperempat dari data berada pada kuartil pertama (Q1),
 setengah dari data berada dibawah kuartil kedua (Q2), dan tiga perempat dari data berada di kuartil ketiga (Q3).
@@ -109,7 +134,7 @@ Dalam *Boxplot* diatas, tidak ditemukan *Outliers* pada kolom numerik *Age*
 
 Dalam *Boxplot* diatas, tidak ditemukan Outliers pada kolom numerik *Cholesterol*
 
-Identifikasi *Outliers* dapat lebih cepat dilakukan apabila kita memanfaatkan *For Loop* untuk membuat visualisasi boxplot sekaligus kepada seluruh kolom numerikal dalam dataset
+Identifikasi *Outliers* dapat lebih cepat dilakukan apabila memanfaatkan *For Loop* untuk membuat visualisasi boxplot sekaligus kepada seluruh kolom numerikal dalam dataset
     
 ![png](output_29_0.png)
     
@@ -117,8 +142,8 @@ Identifikasi *Outliers* dapat lebih cepat dilakukan apabila kita memanfaatkan *F
 
 Hasil analisa juga menunjukkan jika dataset yang ada tidak memiliki *Outliers* untuk kolom numerikalnya
 
-Tahap berikutnya adalah mengetahui *Shape* dari dataset yang kita gunakan.
-Dataset yang kita gunakan memiliki 8763 baris data dengan 26 fitur.
+Tahap berikutnya adalah mengetahui *Shape* dari dataset yang digunakan.
+Dataset yang digunakan memiliki 8763 baris data dengan 26 fitur.
 
 Tahapan selanjutnya yang dilakukan adalah tahapan **Univariate Analysis** dan **Multivariate Analysis**.
 
@@ -479,11 +504,11 @@ Dataset sudah menghapus beberapa kolom yang tidak dibutuhkan, dan siap untuk dil
 
 ### Memisahkan Data *Blood Pressure*
 
-Jika diperhatikan dalam dataset, fitur *Blood Pressure* Masih dalam bentuk Object yang tentunya belum dapat digunakan dalam predksi machine learning, proses berikutnya adalah memisahkan kolom *Blood Pressure*.  
+Jika diperhatikan dalam dataset, fitur *Blood Pressure* Masih dalam bentuk Object yang tentunya belum dapat digunakan dalam prediksi machine learning, proses berikutnya adalah memisahkan kolom *Blood Pressure*.  
 Nilai dalam *Blood Pressure* sendiri ditulis dalam format *Systolic/Diastolic*
 yang mana *Systolic* adalah tekanan darah pada saat jantung memompa darah atau saat berkontraksi, sedangkan *diastolic* adalah tekanan darah pada saat jantung relaksasi
 
-Selanjutnya, mari kita cek data kembali, akan ada penambahan kolom baru yaitu BP_Systolic dan BP_Diastolic
+Selanjutnya, cek data kembali, akan ada penambahan kolom baru yaitu BP_Systolic dan BP_Diastolic
 
     <class 'pandas.core.frame.DataFrame'>
     RangeIndex: 8763 entries, 0 to 8762
@@ -518,7 +543,7 @@ Selanjutnya, mari kita cek data kembali, akan ada penambahan kolom baru yaitu BP
     memory usage: 1.6+ MB
     
 
-Dengan sudah adanya dua kolom baru tersebut, maka kita perlu menghapus kolom *Blood Pressure* sebelumnya karena tidak kita gunakan lagi
+Dengan sudah adanya dua kolom baru tersebut, maka perlu untuk menghapus kolom *Blood Pressure* sebelumnya karena tidak digunakan lagi
 
 
 <div>
@@ -1052,7 +1077,7 @@ Terdapat 2 Kolom yang memiliki tipe data object yang akan di *label encoder* seh
     memory usage: 1.5 MB
     
 
-Dataset siap diproses ke Langkah Selanjutnya, namun, saatnya mengecek korelasi antar data sehingga kita mengetahui faktor apa saja dalam dataset yang paling berpengaruh pada kondisi seseorang terkena serangan jantung
+Dataset siap diproses ke Langkah Selanjutnya, namun, saatnya mengecek korelasi antar data sehingga dapat mengetahui faktor apa saja dalam dataset yang paling berpengaruh pada kondisi seseorang terkena serangan jantung
 
     
 ![png](output_100_0.png)
@@ -1740,6 +1765,19 @@ Kolom *Age*, *Cholesterol*, *Heart Rate*, *Exercise Hours Per Week*, *Stress Lev
 Kolom Numerikal Dalam Data Latih sudah normal dan siap diproses menggunakan algoritma prediksi
 
 ## Modelling 
+### Metrik Evaluasi "Accuracy"
+Metrik evaluasi "accuracy" adalah ukuran yang digunakan untuk mengukur seberapa akurat model klasifikasi dalam mengklasifikasikan data dengan benar. Secara matematis, accuracy didefinisikan sebagai jumlah prediksi yang benar dibagi dengan jumlah total prediksi yang dilakukan oleh model.
+
+Dalam konteks klasifikasi, accuracy dihitung dengan rumus berikut:
+
+\[ \text{Accuracy} = \frac{\text{Jumlah Prediksi Benar}}{\text{Jumlah Total Prediksi}} \]
+
+Di mana:
+- Jumlah Prediksi Benar adalah jumlah sampel yang diklasifikasikan dengan benar oleh model.
+- Jumlah Total Prediksi adalah jumlah total sampel yang dievaluasi oleh model.
+
+Accuracy memberikan gambaran tentang seberapa baik model klasifikasi dapat mengklasifikasikan semua kelas dengan benar. Meskipun accuracy adalah metrik yang penting, namun pada beberapa kasus, seperti ketika data tidak seimbang (imbalance class), accuracy mungkin tidak menjadi metrik evaluasi yang paling baik karena bisa jadi model memiliki tingkat kesalahan yang tinggi dalam mengklasifikasikan kelas minoritas.
+
 ### Klasifikasi Menggunakan Random Forest Classifier
 
 Algoritma **Random Forest** adalah salah satu algoritma pohon keputusan yang sederhana namun stabil. Ini merupakan model *Ensemble Learning* yang memiliki beberapa kelebihan, antara lain:
@@ -1755,13 +1793,13 @@ Dalam proyek ini, kita menggunakan *Random Forest Classifier* dengan parameter b
 - **random_state**: Digunakan untuk mengontrol random number generator yang digunakan.
 - **n_jobs**: Jumlah job (pekerjaan) yang digunakan secara paralel. Ini merupakan komponen untuk mengontrol thread atau proses yang berjalan secara paralel. `n_jobs=-1` artinya semua proses berjalan secara paralel.
 
-Setelah pelatihan, model mencapai akurasi sebesar **82.3%** terhadap data latih. Namun, saat dievaluasi terhadap data uji, akurasinya turun menjadi **64.75%**. Kita mencoba meningkatkan **max_depth** menjadi 18, namun akurasi terhadap data uji tetap rendah (**64.23%**). Langkah terakhir, kita menaikkan **n_estimators** menjadi 100, yang meningkatkan akurasi terhadap data latih menjadi **99.89%**, tetapi akurasi terhadap data uji tetap rendah (**64.69%**).
+Setelah pelatihan, model mencapai akurasi sebesar **82.3%** terhadap data latih. Namun, saat dievaluasi terhadap data uji, akurasinya turun menjadi **64.75%**. hal yang dapat dilakukan adalah mencoba meningkatkan **max_depth** menjadi 18, namun akurasi terhadap data uji tetap rendah (**64.23%**). Langkah terakhir, adalah mencoba menaikkan **n_estimators** menjadi 100, yang meningkatkan akurasi terhadap data latih menjadi **99.89%**, tetapi akurasi terhadap data uji tetap rendah (**64.69%**).
 
 Perlu dilakukan pengujian berulang dengan kombinasi parameter yang berbeda untuk mencapai akurasi yang lebih baik.
 
 ### Analisa Menggunakan AdaBoost Classifier
 
-*AdaBoost Classifier* adalah algoritma *Boosting* yang bertujuan meningkatkan performa prediksi dengan menggabungkan beberapa model sederhana. Dalam proyek ini, kita menggunakan *AdaBoost Classifier* dengan parameter:
+*AdaBoost Classifier* adalah algoritma *Boosting* yang bertujuan meningkatkan performa prediksi dengan menggabungkan beberapa model sederhana. Dalam proyek ini menggunakan *AdaBoost Classifier* dengan parameter:
 
 - **learning_rate**: Menentukan seberapa cepat model belajar dari kesalahan pada setiap iterasi. Jika nilai learning rate kecil, model akan belajar perlahan, sedangkan nilai yang lebih besar akan membuat model belajar lebih cepat.
 - **n_estimators**: Menentukan jumlah model base yang akan digunakan dalam ensemble.
