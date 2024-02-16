@@ -1740,8 +1740,6 @@ Kolom *Age*, *Cholesterol*, *Heart Rate*, *Exercise Hours Per Week*, *Stress Lev
 Kolom Numerikal Dalam Data Latih sudah normal dan siap diproses menggunakan algoritma prediksi
 
 ## Modelling 
-## Modelling & Evaluasi
-
 ### Klasifikasi Menggunakan Random Forest Classifier
 
 Algoritma **Random Forest** adalah salah satu algoritma pohon keputusan yang sederhana namun stabil. Ini merupakan model *Ensemble Learning* yang memiliki beberapa kelebihan, antara lain:
@@ -1752,10 +1750,10 @@ Algoritma **Random Forest** adalah salah satu algoritma pohon keputusan yang sed
 
 Dalam proyek ini, kita menggunakan *Random Forest Classifier* dengan parameter berikut:
 
-- **n_estimators**: 50
-- **max_depth**: 12
-- **random_state**: 42
-- **n_jobs**: -1
+- **n_estimators**: Jumlah pohon dalam forest. (Nilai Default = 100)
+- **max_depth**: Kedalaman atau panjang pohon. Ini merupakan ukuran seberapa banyak pohon dapat membelah (splitting) untuk membagi setiap node ke dalam jumlah pengamatan yang diinginkan.
+- **random_state**: Digunakan untuk mengontrol random number generator yang digunakan.
+- **n_jobs**: Jumlah job (pekerjaan) yang digunakan secara paralel. Ini merupakan komponen untuk mengontrol thread atau proses yang berjalan secara paralel. `n_jobs=-1` artinya semua proses berjalan secara paralel.
 
 Setelah pelatihan, model mencapai akurasi sebesar **82.3%** terhadap data latih. Namun, saat dievaluasi terhadap data uji, akurasinya turun menjadi **64.75%**. Kita mencoba meningkatkan **max_depth** menjadi 18, namun akurasi terhadap data uji tetap rendah (**64.23%**). Langkah terakhir, kita menaikkan **n_estimators** menjadi 100, yang meningkatkan akurasi terhadap data latih menjadi **99.89%**, tetapi akurasi terhadap data uji tetap rendah (**64.69%**).
 
@@ -1765,11 +1763,12 @@ Perlu dilakukan pengujian berulang dengan kombinasi parameter yang berbeda untuk
 
 *AdaBoost Classifier* adalah algoritma *Boosting* yang bertujuan meningkatkan performa prediksi dengan menggabungkan beberapa model sederhana. Dalam proyek ini, kita menggunakan *AdaBoost Classifier* dengan parameter:
 
-- **learning_rate**: 0.1
-- **n_estimators**: 20
-- **random_state**: 42
+- **learning_rate**: Menentukan seberapa cepat model belajar dari kesalahan pada setiap iterasi. Jika nilai learning rate kecil, model akan belajar perlahan, sedangkan nilai yang lebih besar akan membuat model belajar lebih cepat.
+- **n_estimators**: Menentukan jumlah model base yang akan digunakan dalam ensemble.
+- **random_state**: Digunakan untuk mengontrol random number generator yang digunakan.
 
 Setelah pelatihan, model mencapai akurasi sebesar **63.95%** terhadap data latih dan **65.09%** terhadap data uji.
+
 
 ## Evaluation
 berikut merupakan hasil performa pengujian model prediksi, yang mana pengujian dilakukan menggunakan *Random Forest Classifier* dengan 3 kali pengujian dan *Hyperparameter Tuning*, dan dengan 1x pengujian menggunakan *Ada Boost Classifier*
