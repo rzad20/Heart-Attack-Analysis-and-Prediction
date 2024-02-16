@@ -1770,7 +1770,7 @@ Metrik evaluasi "accuracy" adalah ukuran yang digunakan untuk mengukur seberapa 
 
 Dalam konteks klasifikasi, accuracy dihitung dengan rumus berikut:
 
-\[ \text{Accuracy} = \frac{\text{Jumlah Prediksi Benar}}{\text{Jumlah Total Prediksi}} \]
+$$ \text{Accuracy} = \frac{\text{Jumlah Prediksi Benar}}{\text{Jumlah Total Prediksi}} $$
 
 Di mana:
 - Jumlah Prediksi Benar adalah jumlah sampel yang diklasifikasikan dengan benar oleh model.
