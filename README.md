@@ -1765,19 +1765,6 @@ Kolom *Age*, *Cholesterol*, *Heart Rate*, *Exercise Hours Per Week*, *Stress Lev
 Kolom Numerikal Dalam Data Latih sudah normal dan siap diproses menggunakan algoritma prediksi
 
 ## Modelling 
-### Metrik Evaluasi "Accuracy"
-Metrik evaluasi "accuracy" adalah ukuran yang digunakan untuk mengukur seberapa akurat model klasifikasi dalam mengklasifikasikan data dengan benar. Secara matematis, accuracy didefinisikan sebagai jumlah prediksi yang benar dibagi dengan jumlah total prediksi yang dilakukan oleh model.
-
-Dalam konteks klasifikasi, accuracy dihitung dengan rumus berikut:
-
-$$ \text{Accuracy} = \frac{\text{Jumlah Prediksi Benar}}{\text{Jumlah Total Prediksi}} $$
-
-Di mana:
-- Jumlah Prediksi Benar adalah jumlah sampel yang diklasifikasikan dengan benar oleh model.
-- Jumlah Total Prediksi adalah jumlah total sampel yang dievaluasi oleh model.
-
-Accuracy memberikan gambaran tentang seberapa baik model klasifikasi dapat mengklasifikasikan semua kelas dengan benar. Meskipun accuracy adalah metrik yang penting, namun pada beberapa kasus, seperti ketika data tidak seimbang (imbalance class), accuracy mungkin tidak menjadi metrik evaluasi yang paling baik karena bisa jadi model memiliki tingkat kesalahan yang tinggi dalam mengklasifikasikan kelas minoritas.
-
 ### Klasifikasi Menggunakan Random Forest Classifier
 
 Algoritma **Random Forest** adalah salah satu algoritma pohon keputusan yang sederhana namun stabil. Ini merupakan model *Ensemble Learning* yang memiliki beberapa kelebihan, antara lain:
@@ -1809,6 +1796,20 @@ Setelah pelatihan, model mencapai akurasi sebesar **63.95%** terhadap data latih
 
 
 ## Evaluation
+
+### Metrik Evaluasi "Accuracy"
+Metrik evaluasi "accuracy" adalah ukuran yang digunakan untuk mengukur seberapa akurat model klasifikasi dalam mengklasifikasikan data dengan benar. Secara matematis, accuracy didefinisikan sebagai jumlah prediksi yang benar dibagi dengan jumlah total prediksi yang dilakukan oleh model.
+
+Dalam konteks klasifikasi, accuracy dihitung dengan rumus berikut:
+
+$$ \text{Accuracy} = \frac{\text{Jumlah Prediksi Benar}}{\text{Jumlah Total Prediksi}} $$
+
+Di mana:
+- Jumlah Prediksi Benar adalah jumlah sampel yang diklasifikasikan dengan benar oleh model.
+- Jumlah Total Prediksi adalah jumlah total sampel yang dievaluasi oleh model.
+
+Accuracy memberikan gambaran tentang seberapa baik model klasifikasi dapat mengklasifikasikan semua kelas dengan benar. Meskipun accuracy adalah metrik yang penting, namun pada beberapa kasus, seperti ketika data tidak seimbang (imbalance class), accuracy mungkin tidak menjadi metrik evaluasi yang paling baik karena bisa jadi model memiliki tingkat kesalahan yang tinggi dalam mengklasifikasikan kelas minoritas.
+### Hasil Prediksi dan Kesimpulan
 berikut merupakan hasil performa pengujian model prediksi, yang mana pengujian dilakukan menggunakan *Random Forest Classifier* dengan 3 kali pengujian dan *Hyperparameter Tuning*, dan dengan 1x pengujian menggunakan *Ada Boost Classifier*
 
 <div>
