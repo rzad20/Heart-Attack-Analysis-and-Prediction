@@ -1,4 +1,4 @@
-# Laporan Proyek Machine Learning - Rizky Aditya
+# Analisa Kinerja *Random Forest Classifier* dan *AdaBoost Classifier* Dalam Memprediksi Pasien Berisiko Serangan Jantung
 Proyek ini dibuat sebagai bahan tugas pengerjaan proyek dalam kursus Machine Learning Terapan Dicoding
 ## Domain Proyek
 ### Latar Belakang
